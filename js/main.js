@@ -5,8 +5,8 @@ $(document).ready(function(){
             q: $("input").val(),
             APPID: "16ad80008b670f86ac1dfa76771115dc"
         }
-        console.log(datos.APPID)
         $.getJSON("https://api.openweathermap.org/data/2.5/weather", datos, function(res){
+            console.log(res);
             var temp = parseFloat(res.main.temp) - 273.15;
             var empMa = parseFloat(res.main.temp_max) - 273.15;
             var empMi = parseFloat(res.main.temp_min) - 273.15;
